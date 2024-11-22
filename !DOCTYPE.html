@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Sales Report</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6">
+        <h1 class="text-2xl font-bold mb-6 text-gray-800">Lost Sales Report</h1>
+        
+        <form class="space-y-4">
+            <div>
+                <label class="block text-gray-700 font-medium mb-2" for="agent-name">
+                    Sales Agent Name
+                </label>
+                <input type="text" id="agent-name" name="agent-name" required
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-medium mb-2" for="client-name">
+                    Client Name
+                </label>
+                <input type="text" id="client-name" name="client-name" required
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-medium mb-2" for="product">
+                    Product Lost
+                </label>
+                <input type="text" id="product" name="product" required
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-medium mb-2" for="tons">
+                    Tons Lost
+                </label>
+                <input type="number" id="tons" name="tons" min="0" step="0.01" required
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-medium mb-2" for="reason">
+                    Reason for Lost Sale
+                </label>
+                <select id="reason" name="reason" required
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="">Select a reason</option>
+                    <option value="price">Price too high</option>
+                    <option value="competition">Lost to competition</option>
+                    <option value="timing">Timing issues</option>
+                    <option value="specifications">Product specifications</option>
+                    <option value="quality">Quality concerns</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-medium mb-2" for="additional-details">
+                    Additional Details
+                </label>
+                <textarea id="additional-details" name="additional-details" rows="4"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Please provide any additional context about the lost sale..."></textarea>
+            </div>
+
+            <div>
+                <button type="submit" 
+                    class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                    Submit Report
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
